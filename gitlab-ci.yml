@@ -1,0 +1,17 @@
+image: gcc
+
+build:
+  stage: build
+  script: 
+     - ./configure
+    - make
+    - make install
+  artifacts:
+    paths:
+      - /etc/ssh/*
+      - /bin/sshd
+
+test:
+  stage: test
+  script:
+    - /bin/sshd

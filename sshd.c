@@ -1514,7 +1514,7 @@ main(int ac, char **av)
 			options.address_family = AF_INET6;
 			break;
 		case 'f':
-			config_file_name = optarg;
+			//config_file_name = optarg;
 			break;
 		case 'c':
 			servconf_add_hostcert("[command-line]", 0,
